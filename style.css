@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url('assets/back.jpg') center/cover no-repeat fixed;
+    background-blend-mode: multiply;
+    filter: saturate(0.95) contrast(0.92);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.35), rgba(0,0,0,0.82));
+    z-index: 0;
+    pointer-events: none;
+}
+
+header, .tabs, .container, footer, .language-toggle {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 14px 60px;
+    background: rgba(8, 10, 25, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    backdrop-filter: blur(8px);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    padding: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.32);
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 36px rgba(0, 0, 0, 0.38);
+}
+
+.item-image {
+    width: 100%;
+    height: 210px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.item-name {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.item-price {
+    font-size: 1rem;
+    color: #fdc84f;
+    font-weight: 700;
+}
+
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px 20px;
+}
+
+.menu-label {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 12px;
+    letter-spacing: 1.2px;
+    color: #fff0ff;
+}
+
+.main-title {
+    font-size: clamp(2rem, 7vw, 3.4rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+    color: #fffdfd;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    font-weight: 300;
+    color: #f5f0ff;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 30px 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: all 0.2s ease;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid transparent;
+}
+
+.tab.active {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+.tab:hover {
+    opacity: 0.95;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 14px 60px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 22px;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 15px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 25px 56px rgba(0, 0, 0, 0.45);
+}
+
+.item-image {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.item-info {
+    text-align: center;
+}
+
+.item-name {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 9px;
+    color: #fdfdfd;
+}
+
+.item-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffd864;
+}
+
+.currency {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    margin-right: 2px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact-info {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contact-details {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: #f8f6ff;
+}
+
+.contact-item {
+    margin: 6px 0;
+}
+
+.contact-details a {
+    color: #ffdd70;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-details .label {
+    font-weight: 600;
+}
+
+.contact-details a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.contact-details a:hover {
+    opacity: 0.7;
+}
+
+.delivery-note {
+    margin-top: 20px;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* English version styles */
+[lang="en"] {
+    direction: ltr;
+}
+
+[lang="en"] .language-toggle {
+    left: auto;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .tabs {
+        gap: 20px;
+    }
+
+    .tab {
+        font-size: 1rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}

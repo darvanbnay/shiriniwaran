@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شیرینی و دیزێرت</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="language-toggle" onclick="toggleLanguage()">English</button>
+
+    <header>
+        <p class="menu-label">مێنو </p>
+        <h1 class="main-title">شیرینی واران</h1>
+        <p class="subtitle"></p>
+    </header>
+
+    <nav class="tabs">
+        <div class="tab active" onclick="filterCategory('desserts', event)">شیرینی</div>
+    </nav>
+
+    <div class="container">
+        <div class="menu-grid" id="menuGrid">
+            <!-- Desserts Category -->
+            <div class="menu-item" data-category="desserts">
+                <img src="assets/redvelvet.jpg" alt="Red Velvet Cake" class="item-image">
+                <div class="item-info">
+                    <h3 class="item-name">Red Velvet Cake</h3>
+                    <p class="item-price">١٠,٠٠٠ <span class="currency">دینار</span></p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="assets/pancake.jpg" alt="Pancake Nutella" class="item-image">
+                <div class="item-info">
+                    <h3 class="item-name">Pancake Nutella</h3>
+                    <p class="item-price">٨,٥٠٠ <span class="currency">دینار</span></p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="desserts">
+                <img src="assets/pinkswirl.jpg" alt="Pink Swirl Cupcakes" class="item-image">
+                <div class="item-info">
+                    <h3 class="item-name">Pink Swirl Cupcakes</h3>
+                    <p class="item-price">٧,٥٠٠ <span class="currency">دینار</span></p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <h3 class="contact-title">پەیوەندیمان پێوە بکە</h3>
+            <div class="contact-details">
+                <p class="contact-item">📞 <span class="label">تەلەفۆن:</span> <a href="tel:+9647501234567">+964 750 123 4567</a></p>
+                <p class="contact-item">🎵 <span class="label">تیکتۆک:</span> <a href="https://www.tiktok.com/@shirini_corner" target="_blank" rel="noopener noreferrer">@shirini_corner</a></p>
+                <p>📍 <span class="label">ناونیشان:</span> هەولێر، کوردستان </p>
+                <p class="delivery-note">گەیاندن بەردەستە بۆ هەولێر </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="new.js"></script>
+</body>
+</html>
